@@ -6,12 +6,21 @@ android {
     namespace 'com.auto.calculator'
     compileSdk 34
 
+    android.applicationVariants.all {
+        variant ->
+            variant.outputs.all {
+                def date = new Date().format("YYYYMMdd")
+                //在这里修改apk文件名
+                outputFileName = "Calculator-v${variant.versionName}.${date}-${variant.name}.apk"
+            }
+    }
+
     defaultConfig {
         applicationId "com.auto.calculator"
         minSdk 34
         targetSdk 34
-        versionCode 1
-        versionName "1.0"
+        versionCode 20250605
+        versionName "1.0.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

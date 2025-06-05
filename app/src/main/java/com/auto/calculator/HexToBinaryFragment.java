@@ -67,7 +67,7 @@ public class HexToBinaryFragment extends Fragment {
 
                     outputCore.setText("抓包核心: " + (coreIds.isEmpty() ? "无中间核心" : coreIds.toString()));
                 } catch (NumberFormatException e) {
-                    outputBinary.setText("格式错误");
+                    outputBinary.setText("二进制: 格式错误");
                     outputCore.setText("抓包核心: 格式错误");
                 }
 
