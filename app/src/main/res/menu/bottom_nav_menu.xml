@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_hex"
+        android:icon="@android:drawable/ic_menu_edit"
+        android:title="Hex转二进制" />
+    <item
+        android:id="@+id/nav_time"
+        android:icon="@android:drawable/ic_menu_today"
+        android:title="时间戳转换" />
+</menu>
