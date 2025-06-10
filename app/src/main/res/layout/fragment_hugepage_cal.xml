@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+    <EditText
+        android:id="@+id/et_total_memory_hugepage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入总内存大小（单位：G）" />
+    <Button
+        android:id="@+id/btn_calculate_hugepage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="计算"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp" />
+    <TextView
+        android:id="@+id/tv_recommended_large_page_hugepage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="推荐大页大小："
+        android:layout_marginTop="16dp" />
+    <TextView
+        android:id="@+id/tv_storage_blocks_hugepage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="存储块数："
+        android:layout_marginTop="8dp" />
+</LinearLayout>

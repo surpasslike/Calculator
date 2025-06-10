@@ -27,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
         List<Fragment> fragments = new ArrayList<>();
         fragments.add(new HexToBinaryFragment());
         fragments.add(new TimestampConverterFragment());
+        fragments.add(new HugepageCalFragment());
+        fragments.add(new NetworkCalculatorFragment());
 
         viewPager.setAdapter(new SimpleFragmentAdapter(this, fragments));
 
@@ -35,6 +37,10 @@ public class MainActivity extends AppCompatActivity {
                 viewPager.setCurrentItem(0);
             } else if (item.getItemId() == R.id.nav_time) {
                 viewPager.setCurrentItem(1);
+            } else if (item.getItemId() == R.id.action_hugepage_cal) {
+                viewPager.setCurrentItem(2);
+            }else if (item.getItemId() == R.id.nav_network) { // 处理网络计算器菜单项
+                viewPager.setCurrentItem(3); // 假设网络计算器是第四个 Fragment（根据添加顺序调整）
             }
             return true;
         });

@@ -23,6 +23,8 @@ public class HexToBinaryFragment extends Fragment {
     private TextView outputBinary;
     private TextView outputCore;
 
+    private TextView outputtip;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
@@ -73,6 +75,7 @@ public class HexToBinaryFragment extends Fragment {
 
             }
         });
+
 
         return view;
     }

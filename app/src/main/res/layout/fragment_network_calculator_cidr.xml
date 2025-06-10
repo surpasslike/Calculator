@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/et_cidr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入 CIDR 表示法（例如：192.168.1.0/24）" />
+
+    <Button
+        android:id="@+id/btn_calculate_network_cidr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="计算"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/tv_network_address_cidr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="网络地址："
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/tv_broadcast_address_cidr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="广播地址："
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/tv_subnet_mask_cidr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="子网掩码："
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/tv_hosts_count_cidr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="可用主机数："
+        android:layout_marginTop="8dp" />
+
+</LinearLayout>

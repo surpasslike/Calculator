@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/et_ip_address_node"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入 IP 地址（例如：192.168.1.100）" />
+
+    <EditText
+        android:id="@+id/et_subnet_mask_node"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入子网掩码（例如：255.255.255.0）" />
+
+    <Button
+        android:id="@+id/btn_calculate_network_node"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="计算"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/tv_network_address_node_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="网络地址："
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/tv_broadcast_address_node_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="广播地址："
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/tv_hosts_range_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="可用主机范围："
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/tv_subnets_count_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="子网数量："
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/tv_nodes_per_subnet_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="每个子网节点数："
+        android:layout_marginTop="8dp" />
+
+</LinearLayout>
