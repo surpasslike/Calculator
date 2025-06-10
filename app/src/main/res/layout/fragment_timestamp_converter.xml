@@ -6,158 +6,193 @@
     android:padding="16dp">
 
     <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="wrap_content">
 
-        <!-- 时间输入字段 -->
+        <!-- 时间0 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:orientation="horizontal">
-
             <TextView
                 android:layout_width="0dp"
+                android:layout_weight="1.5"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="时间0: analysis timesec" />
-
+                android:minWidth="100dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="0: analysis timesec"
+                android:textSize="14sp" />
             <EditText
                 android:id="@+id/input_0"
-                android:layout_width="180dp"
+                android:layout_width="0dp"
+                android:layout_weight="2"
                 android:layout_height="wrap_content"
                 android:background="@drawable/edittext_background"
                 android:inputType="number"
-                android:padding="10dp" />
+                android:padding="10dp"
+                android:textSize="14sp" />
         </LinearLayout>
 
+        <!-- 时间1 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:orientation="horizontal">
-
             <TextView
                 android:layout_width="0dp"
+                android:layout_weight="1.5"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="时间1: last submit" />
-
+                android:minWidth="100dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="1: last submit"
+                android:textSize="14sp" />
             <EditText
                 android:id="@+id/input_1"
-                android:layout_width="180dp"
+                android:layout_width="0dp"
+                android:layout_weight="2"
                 android:layout_height="wrap_content"
                 android:background="@drawable/edittext_background"
                 android:inputType="number"
-                android:padding="10dp" />
+                android:padding="10dp"
+                android:textSize="14sp" />
         </LinearLayout>
 
+        <!-- 时间2 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:orientation="horizontal">
-
             <TextView
                 android:layout_width="0dp"
+                android:layout_weight="1.5"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="时间2: recognize done" />
-
+                android:minWidth="100dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="2: recognize done"
+                android:textSize="14sp" />
             <EditText
                 android:id="@+id/input_2"
-                android:layout_width="180dp"
+                android:layout_width="0dp"
+                android:layout_weight="2"
                 android:layout_height="wrap_content"
                 android:background="@drawable/edittext_background"
                 android:inputType="number"
-                android:padding="10dp" />
+                android:padding="10dp"
+                android:textSize="14sp" />
         </LinearLayout>
 
+        <!-- 时间3 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:orientation="horizontal">
-
             <TextView
                 android:layout_width="0dp"
+                android:layout_weight="1.5"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="时间3: analysis done" />
-
+                android:minWidth="100dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="3: analysis done"
+                android:textSize="14sp" />
             <EditText
                 android:id="@+id/input_3"
-                android:layout_width="180dp"
+                android:layout_width="0dp"
+                android:layout_weight="2"
                 android:layout_height="wrap_content"
                 android:background="@drawable/edittext_background"
                 android:inputType="number"
-                android:padding="10dp" />
+                android:padding="10dp"
+                android:textSize="14sp" />
         </LinearLayout>
 
+        <!-- 时间4 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:orientation="horizontal">
-
             <TextView
                 android:layout_width="0dp"
+                android:layout_weight="1.5"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="时间4: merge done" />
-
+                android:minWidth="100dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="4: merge done"
+                android:textSize="14sp" />
             <EditText
                 android:id="@+id/input_4"
-                android:layout_width="180dp"
+                android:layout_width="0dp"
+                android:layout_weight="2"
                 android:layout_height="wrap_content"
                 android:background="@drawable/edittext_background"
                 android:inputType="number"
-                android:padding="10dp" />
+                android:padding="10dp"
+                android:textSize="14sp" />
         </LinearLayout>
 
+        <!-- 时间5 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:orientation="horizontal">
-
             <TextView
                 android:layout_width="0dp"
+                android:layout_weight="1.5"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="时间5: compress done" />
-
+                android:minWidth="100dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="5: compress done"
+                android:textSize="14sp" />
             <EditText
                 android:id="@+id/input_5"
-                android:layout_width="180dp"
+                android:layout_width="0dp"
+                android:layout_weight="2"
                 android:layout_height="wrap_content"
                 android:background="@drawable/edittext_background"
                 android:inputType="number"
-                android:padding="10dp" />
+                android:padding="10dp"
+                android:textSize="14sp" />
         </LinearLayout>
 
+        <!-- 时间6 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:orientation="horizontal">
-
             <TextView
                 android:layout_width="0dp"
+                android:layout_weight="1.5"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="时间6: storage done" />
-
+                android:minWidth="100dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="6: storage done"
+                android:textSize="14sp" />
             <EditText
                 android:id="@+id/input_6"
-                android:layout_width="180dp"
+                android:layout_width="0dp"
+                android:layout_weight="2"
                 android:layout_height="wrap_content"
                 android:background="@drawable/edittext_background"
                 android:inputType="number"
-                android:padding="10dp" />
+                android:padding="10dp"
+                android:textSize="14sp" />
         </LinearLayout>
 
+        <!-- 输出区域 -->
         <TextView
             android:id="@+id/output_all_result"
             android:layout_width="match_parent"
@@ -168,7 +203,7 @@
             android:scrollHorizontally="false"
             android:text="转换结果："
             android:textColor="#222222"
-            android:textSize="14sp"
+            android:textSize="13sp"
             android:typeface="monospace" />
     </LinearLayout>
 </ScrollView>
