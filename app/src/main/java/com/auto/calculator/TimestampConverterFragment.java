@@ -22,7 +22,7 @@ public class TimestampConverterFragment extends Fragment {
     private final EditText[] inputs = new EditText[7];
     private TextView outputAll;
 
-    private final String[] labels = new String[]{"时间0 analysis timesec", "时间1 last submit", "时间2 recognize done", "时间3 analysis done", "时间4 merge done", "时间5 compress done", "时间6 storage done"};
+    private final String[] labels = new String[]{"0-analysis timesec", "1-last submit", "2-recognize done", "3-analysis done", "4-merge done", "5-compress done", "6-storage done"};
 
     @Nullable
     @Override
