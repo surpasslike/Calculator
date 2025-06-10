@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (item.getItemId() == R.id.action_hugepage_cal) {
                 viewPager.setCurrentItem(2);
             }else if (item.getItemId() == R.id.nav_network) { // 处理网络计算器菜单项
-                viewPager.setCurrentItem(3); // 假设网络计算器是第四个 Fragment（根据添加顺序调整）
+                viewPager.setCurrentItem(3); // 设网络计算器是第四个 Fragment（根据添加顺序调整）
             }
             return true;
         });
