@@ -28,4 +28,9 @@
         android:layout_height="wrap_content"
         android:text="存储块数："
         android:layout_marginTop="8dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="tips: 一般情况下不超过推荐配置，调优场景根据实际情况判断。"
+        android:layout_marginTop="8dp" />
 </LinearLayout>
