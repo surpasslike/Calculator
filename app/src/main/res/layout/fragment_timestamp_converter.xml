@@ -21,7 +21,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="analysis timesec" />
+                android:text="时间0: analysis timesec" />
 
             <EditText
                 android:id="@+id/input_0"
@@ -42,7 +42,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="last submit" />
+                android:text="时间1: last submit" />
 
             <EditText
                 android:id="@+id/input_1"
@@ -63,7 +63,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="recognize done" />
+                android:text="时间2: recognize done" />
 
             <EditText
                 android:id="@+id/input_2"
@@ -84,7 +84,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text=" analysis done" />
+                android:text="时间3: analysis done" />
 
             <EditText
                 android:id="@+id/input_3"
@@ -105,7 +105,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="merge done" />
+                android:text="时间4: merge done" />
 
             <EditText
                 android:id="@+id/input_4"
@@ -126,7 +126,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="compress done" />
+                android:text="时间5: compress done" />
 
             <EditText
                 android:id="@+id/input_5"
@@ -147,7 +147,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="storage done" />
+                android:text="时间6: storage done" />
 
             <EditText
                 android:id="@+id/input_6"
