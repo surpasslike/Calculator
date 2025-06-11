@@ -23,8 +23,6 @@ public class HexToBinaryFragment extends Fragment {
     private TextView outputBinary;
     private TextView outputCore;
 
-    private TextView outputtip;
-
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
@@ -36,9 +34,16 @@ public class HexToBinaryFragment extends Fragment {
         outputCore = view.findViewById(R.id.output_core);
 
         inputHex.addTextChangedListener(new TextWatcher() {
-            @Override public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
-            @Override public void onTextChanged(CharSequence s, int start, int before, int count) {}
-            @Override public void afterTextChanged(Editable s) {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
                 String hex = s.toString().trim();
                 if (hex.isEmpty()) {
                     outputBinary.setText("二进制: ");
@@ -49,7 +54,10 @@ public class HexToBinaryFragment extends Fragment {
                 try {
                     int decimal = Integer.parseInt(hex, 16);
                     String binary = Integer.toBinaryString(decimal);
-                    outputBinary.setText("二进制: " + binary);
+
+                    // 处理二进制字符串，每四位添加一个空格
+                    String formattedBinary = formatBinaryString(binary);
+                    outputBinary.setText("二进制: " + formattedBinary);
 
                     List<Integer> coreIds = new ArrayList<>();
                     for (int i = 0; i < binary.length(); i++) {
@@ -76,7 +84,20 @@ public class HexToBinaryFragment extends Fragment {
             }
         });
 
-
         return view;
+    }
+
+    // 格式化二进制字符串，每四位添加一个空格
+    private String formatBinaryString(String binary) {
+        StringBuilder result = new StringBuilder();
+        int length = binary.length();
+        for (int i = 0; i < length; i++) {
+            result.append(binary.charAt(i));
+            // 每四位添加一个空格，注意最后四位后面不添加
+            if ((i + 1) % 4 == 0 && i + 1 < length) {
+                result.append(" ");
+            }
+        }
+        return result.toString();
     }
 }
