@@ -5,7 +5,7 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager2.widget.ViewPager2;
-
+import com.auto.calculator.BrowserFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         fragments.add(new TimestampConverterFragment());
         fragments.add(new HugepageCalFragment());
         fragments.add(new NetworkCalculatorFragment());
+        fragments.add(new BrowserFragment()); // 添加浏览器 Fragment
 
         viewPager.setAdapter(new SimpleFragmentAdapter(this, fragments));
 
@@ -41,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
                 viewPager.setCurrentItem(2);
             }else if (item.getItemId() == R.id.nav_network) { // 处理网络计算器菜单项
                 viewPager.setCurrentItem(3); // 设网络计算器是第四个 Fragment（根据添加顺序调整）
+            }else if (item.getItemId() == R.id.nav_browser) { // 新添加的浏览器菜单项
+                viewPager.setCurrentItem(4); // 浏览器 Fragment 是第五个（索引 4）
             }
             return true;
         });
