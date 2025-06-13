@@ -5,8 +5,9 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager2.widget.ViewPager2;
-import com.auto.calculator.BrowserFragment;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.tabs.TabLayoutMediator;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +15,15 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     private ViewPager2 viewPager;
-    private BottomNavigationView bottomNav;
+    private TabLayout tabLayout;
+
+    private final String[] tabTitles = {
+            "抓包核心",
+            "时间戳转换",
+            "大页计算",
+            "网络计算器",
+            "网页"
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,37 +31,36 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         viewPager = findViewById(R.id.view_pager);
-        bottomNav = findViewById(R.id.bottom_navigation);
+        tabLayout = findViewById(R.id.tab_layout);
 
         List<Fragment> fragments = new ArrayList<>();
         fragments.add(new HexToBinaryFragment());
         fragments.add(new TimestampConverterFragment());
         fragments.add(new HugepageCalFragment());
         fragments.add(new NetworkCalculatorFragment());
-        fragments.add(new BrowserFragment()); // 添加浏览器 Fragment
+        fragments.add(new BrowserFragment());
 
         viewPager.setAdapter(new SimpleFragmentAdapter(this, fragments));
 
-        bottomNav.setOnItemSelectedListener(item -> {
-            if (item.getItemId() == R.id.nav_hex) {
-                viewPager.setCurrentItem(0);
-            } else if (item.getItemId() == R.id.nav_time) {
-                viewPager.setCurrentItem(1);
-            } else if (item.getItemId() == R.id.action_hugepage_cal) {
-                viewPager.setCurrentItem(2);
-            }else if (item.getItemId() == R.id.nav_network) { // 处理网络计算器菜单项
-                viewPager.setCurrentItem(3); // 设网络计算器是第四个 Fragment（根据添加顺序调整）
-            }else if (item.getItemId() == R.id.nav_browser) { // 新添加的浏览器菜单项
-                viewPager.setCurrentItem(4); // 浏览器 Fragment 是第五个（索引 4）
+        new TabLayoutMediator(tabLayout, viewPager, (tab, position) -> {
+            tab.setText(tabTitles[position]);
+            switch (position) {
+                case 0:
+                    tab.setIcon(android.R.drawable.ic_menu_edit);       // 抓包核心
+                    break;
+                case 1:
+                    tab.setIcon(android.R.drawable.ic_menu_today);      // 时间戳转换
+                    break;
+                case 2:
+                    tab.setIcon(android.R.drawable.ic_menu_manage);     // 大页计算
+                    break;
+                case 3:
+                    tab.setIcon(android.R.drawable.ic_menu_compass);    // 网络计算器
+                    break;
+                case 4:
+                    tab.setIcon(android.R.drawable.ic_menu_view);       // 网页
+                    break;
             }
-            return true;
-        });
-
-        viewPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
-            @Override
-            public void onPageSelected(int position) {
-                bottomNav.getMenu().getItem(position).setChecked(true);
-            }
-        });
+        }).attach();
     }
 }
